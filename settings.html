@@ -5,5 +5,20 @@
 </head>
     <p>Settings</p>
     <script type="text/javascript" src="//static.parastorage.com/services/js-sdk/1.87.0/js/wix.min.js"></script>
+
+
+    <input type="text" id="name-input" />
     
+
+    <script>
+
+        window.addEventListener('load', function(){
+            const input = document.getElementById('name-input');
+            input.addEventListener('change', function(){
+                Wix.Settings.triggerSettingsUpdatedEvent({
+                    name: input.value
+                });
+            });
+        });
+    </script>
 </html>
