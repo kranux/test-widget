@@ -5,4 +5,21 @@
 </head>
     <p>Widget content</p>
     <script type="text/javascript" src="//static.parastorage.com/services/js-sdk/1.87.0/js/wix.min.js"></script>
+
+    <script>
+
+        window.addEventListener('load', function() {
+            Wix.Settings.addComponent({
+                componentType: 'WIDGET',
+                copyStyle:true,
+                widget : {widgetId:'minicart'}},
+                function(x) {
+                    console.info(x)
+                },
+                function(x) {
+                    console.error(x)
+                }
+            )
+        });
+    </script>
 </html>
